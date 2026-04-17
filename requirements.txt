@@ -2,7 +2,6 @@
 # Install with: python -m pip install -r requirements.txt
 
 # Core dependencies
-pyaudio==0.2.14
 groq==1.1.2
 requests==2.33.1
 keyboard==0.13.5
