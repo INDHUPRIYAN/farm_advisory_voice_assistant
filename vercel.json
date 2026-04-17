@@ -1,0 +1,28 @@
+{
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/",
+      "dest": "index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.html"
+    }
+  ],
+  "env": {
+    "BHASHINI_USER_ID": "@bhashini-user-id",
+    "BHASHINI_API_KEY": "@bhashini-api-key",
+    "BHASHINI_AUTH": "@bhashini-auth",
+    "GROQ_API_KEY": "@groq-api-key"
+  }
+}

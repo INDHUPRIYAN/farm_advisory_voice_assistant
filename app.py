@@ -12,11 +12,11 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import base64, os, sys
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "api"))
 
-# ── Import from indexcpy.py backend ─────────────────────────────────────────────
+# ── Import from index.py backend ─────────────────────────────────────────────
 try:
-    from indexcpy import (
+    from index import (
         bhashini_asr_translate,
         bhashini_translate_tts,
         bhashini_translate_text,
